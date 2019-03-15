@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title> THIS IS A VOUCHER GENERATOR INTERFACE</title>
 </head>
 <body>
+	<h1>MR BEYOND'S VOUCHER</h1>
  <input type="number" id="howmany"><br><br>
  <button onclick="generate()">Generate Voucher</button>
  <div id="output" style="background-color: #338fff; color: white ; margin:0 56% 0 14%;"></div>
@@ -24,9 +25,9 @@
 			 		dyv+=tt;
 		 		 dyv+="</div>";
 		 		 output.innerHTML= dyv;}
+		 		 dyv+="<br>"; howmany.focus();}
 		 		 console.log(dyv);
-		 		 dyv+="<br>"; howmany.focus();
-		 		  }   }
+		 		  }   
  </script>
 </body>
 </html>
