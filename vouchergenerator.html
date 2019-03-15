@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ <input type="number" id="howmany"><br><br>
+ <button onclick="generate()">Generate Voucher</button>
+ <div id="output" style="background-color: #338fff; color: white ; margin:0 56% 0 14%;"></div>
+ <script type="text/javascript"> 
+ 	howmany.focus();  var dyv="";
+ 		function generate() {
+ 		if (howmany.value==0 || howmany.value=="" ||howmany.value<0){ alert("Please enter a valid number"); howmany.focus()}	
+		else{for (var i=0; i<howmany.value; i++) {
+				dyv+="<div>";
+				 var count =1; var aa=""; var tt;
+					for (var m=0; m<16; m++){
+			 		aa+= Math.floor(Math.random()*10);
+		 		 	if (count==4){aa+="-"; count=0;}
+			 		count++; 
+			 		tt=aa.toString();
+			 		if (tt.length===20){tt=tt.slice(0, -1)} }
+					console.log(tt);
+			 		dyv+=tt;
+		 		 dyv+="</div>";
+		 		 output.innerHTML= dyv;}
+		 		 console.log(dyv);
+		 		 dyv+="<br>"; howmany.focus();
+		 		  }   }
+ </script>
+</body>
+</html>
